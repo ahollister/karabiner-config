@@ -1,0 +1,38 @@
+{
+    "title": "Page up/down to move desktops",
+    "rules": [
+        {
+            "description": "Use page up and down keys to move left and right between desktops",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "page_up"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_control"
+                              ]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "page_down"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_control"
+                              ]
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}
