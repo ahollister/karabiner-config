@@ -19,12 +19,6 @@
             "description": "Change caps_lock to command+control+option+shift.",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"],
-                    "type": "frontmost_application_unless"
-                  }
-                ],
                 "description": "Change caps_lock to command+control+option+shift.",
                 "from": {
                   "key_code": "caps_lock",
@@ -68,59 +62,6 @@
                   }
                 ],
                 "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "iTerm2 - use left control as hyper key",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "left_control"
-                },
-                "to": [
-                  {
-                    "key_code": "left_shift",
-                    "modifiers": ["left_command", "left_control", "left_option"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
-            "manipulators": [
-              {
-                "type": "basic",
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_control"
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "escape"
-                  }
-                ]
               }
             ]
           }
