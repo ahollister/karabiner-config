@@ -16,10 +16,10 @@
         },
         "rules": [
           {
-            "description": "Change caps_lock to command+control+option+shift.",
+            "description": "Change caps_lock to ESC.",
             "manipulators": [
               {
-                "description": "Change caps_lock to command+control+option+shift.",
+                "description": "Change caps_lock to ESC.",
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
@@ -28,8 +28,8 @@
                 },
                 "to": [
                   {
-                    "key_code": "left_shift",
-                    "modifiers": ["left_command", "left_control", "left_option"]
+                    "key_code": "escape",
+                    "modifiers": []
                   }
                 ],
                 "type": "basic"
@@ -37,7 +37,7 @@
             ]
           },
           {
-            "description": "Use page up and down keys to move left and right between desktops",
+            "description": "Use page up and down keys to move up and down in vim",
             "manipulators": [
               {
                 "from": {
@@ -45,7 +45,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "right_arrow",
+                    "key_code": "u",
                     "modifiers": ["left_control"]
                   }
                 ],
@@ -57,7 +57,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "left_arrow",
+                    "key_code": "d",
                     "modifiers": ["left_control"]
                   }
                 ],
