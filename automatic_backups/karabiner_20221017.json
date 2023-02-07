@@ -16,24 +16,20 @@
         },
         "rules": [
           {
-            "description": "Change caps_lock to ESC when pressed, Control when held",
+            "description": "Change caps_lock to ESC.",
             "manipulators": [
               {
-                "description": "Change caps_lock to ESC when pressed, Control when held",
+                "description": "Change caps_lock to ESC.",
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
                     "optional": ["any"]
                   }
                 },
-                "to_if_alone": [
+                "to": [
                   {
-                    "key_code": "escape"
-                  }
-                ],
-                "to_if_held_down": [
-                  {
-                    "key_code": "left_control"
+                    "key_code": "escape",
+                    "modifiers": []
                   }
                 ],
                 "type": "basic"
@@ -62,23 +58,6 @@
                 "to": [
                   {
                     "key_code": "d",
-                    "modifiers": ["left_control"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Use delete_forward key as ctrl-b (useful for tmux)",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "delete_forward"
-                },
-                "to": [
-                  {
-                    "key_code": "b",
                     "modifiers": ["left_control"]
                   }
                 ],
@@ -282,7 +261,18 @@
         "delay_milliseconds_before_open_device": 1000
       },
       "selected": true,
-      "simple_modifications": [],
+      "simple_modifications": [
+        {
+          "from": {
+            "key_code": "delete_forward"
+          },
+          "to": [
+            {
+              "consumer_key_code": "al_local_machine_browser"
+            }
+          ]
+        }
+      ],
       "virtual_hid_keyboard": {
         "country_code": 0,
         "indicate_sticky_modifier_keys_state": true,
@@ -291,3 +281,4 @@
     }
   ]
 }
+
