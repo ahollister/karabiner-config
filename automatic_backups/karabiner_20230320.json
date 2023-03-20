@@ -126,13 +126,8 @@
                                     {
                                         "key_code": "backslash",
                                         "modifiers": [
-                                            "left_control"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "n",
-                                        "modifiers": [
-                                            "left_control"
+                                            "left_control",
+                                            "n"
                                         ]
                                     }
                                 ],
@@ -336,7 +331,7 @@
                     ]
                 }
             ],
-            "name": "Adam",
+            "name": "Caps - Hyper",
             "parameters": {
                 "delay_milliseconds_before_open_device": 1000
             },
